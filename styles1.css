@@ -1,0 +1,187 @@
+/* Общие настройки */
+body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    color: #fff;
+    margin: 0;
+    overflow-x: hidden; /* Защита от горизонтальной прокрутки */
+}
+
+/* Универсальный контейнер для центрирования */
+.container, .footer-color {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Отступы по бокам на мобилках */
+}
+
+/* Шапка */
+.header {
+    background-color: #454545;
+    min-height: 103px;
+    height: auto;
+}
+
+.header-line {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Чтобы меню переносилось, если не влезает */
+    gap: 20px;
+}
+
+.nav-item {
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 25px;
+}
+
+.nav-item:hover {
+    transition: all 0.2s ease;
+    color: #FF9315;
+}
+
+.button, .button-main {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 600;
+    color: #FF9315;
+    border: 1px solid #FF9315;
+    border-radius: 33px;
+    text-decoration: none;
+    padding: 15px 40px; /* Немного уменьшил padding для мобильных */
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #FF9315;
+    color: #454545;
+}
+
+/* Главный блок (Hero section) */
+.header-down {
+    padding: 60px 20px;
+    background-color: #414141;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Фото уйдет вниз на мобильных */
+    gap: 40px;
+}
+
+.header-down_text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.header-down_image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.header-down_image img {
+    max-width: 100%;
+    height: auto; /* Картинка теперь сжимается */
+}
+
+.htext {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-size: clamp(32px, 5vw, 60px); /* Шрифт уменьшается сам! */
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.main-text > span {
+    color: #FF9315;
+}
+
+.small-text {
+    max-width: 520px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    height: auto; /* Убрал фиксированную высоту */
+}
+
+.button-main {
+    background-color: #FF9315;
+    color: #454545;
+}
+
+/* Контентная часть */
+main {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.board {
+    color: #454545;
+    margin-bottom: 80px;
+}
+
+.mb-stext, .w-stext {
+    max-width: 630px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    height: auto;
+}
+
+/* Галереи */
+.md-1row, .md-2row, .w-2row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Картинки встают в ряд или колонку */
+    margin-bottom: 15px;
+}
+
+.md-1row img, .md-2row img, .w-1row img, .w-2row img {
+    flex: 1 1 300px; /* Базовая ширина 300px, но могут расти */
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Футер */
+footer {
+    background-color: #414141;
+    padding: 60px 0;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.footer-main-text {
+    font-size: 32px;
+    color: #FF9315;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Медиа-запрос для совсем маленьких экранов (телефоны) */
+@media (max-width: 768px) {
+    .header-line {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 10px;
+    }
+
+    .header-down {
+        text-align: center;
+    }
+
+    .small-text {
+        margin: 0 auto 30px;
+    }
+}
